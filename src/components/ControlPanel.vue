@@ -1,6 +1,5 @@
 <template>
     <div class="control_panel">
-        <slot></slot> <!-- 使用 slot 来接收内容 -->
     </div>
 </template>
 
@@ -10,11 +9,12 @@
 
 <style scoped>
 .control_panel {
-    background-color: yellow;
     display: flex;
+    background-color: yellow;
+    
     flex-direction: column;
     flex-wrap: wrap;
-    flex-shrink: 0;
     width: 250px;
+    box-sizing:border-box;
 }
 </style>

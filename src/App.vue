@@ -1,31 +1,12 @@
 <script setup lang="ts" name="App">
-import ControlPanel from "@/components/ControlPanel.vue";
-import InfoPanel from "@/components/InfoPanel.vue";
-import MainWindow from "@/components/MainWindow.vue";
+// import { provide } from 'vue';
+import Main from "@/components/Main.vue";
+// provide('apiBaseUrl', 'http://127.0.0.1:5000');
 </script>
 
 <template>
-  <div class="container">
-    <ControlPanel>
-      sth1
-      <!-- 可以在这里填充具体的内容 -->
-    </ControlPanel>
-
-    <MainWindow> sth2 </MainWindow>
-    <InfoPanel>sth2</InfoPanel>
-  </div>
+  <Main></Main>
 </template>
 
 <style scoped>
-.container {
-  width: 100vw;
-  height: 100vh;
-  border: 1px solid #000;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: flex-start;
-  align-items: stretch;
-}
 </style>
