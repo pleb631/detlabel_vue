@@ -1,5 +1,6 @@
 <template>
     <div class="control_panel">
+        123
     </div>
 </template>
 

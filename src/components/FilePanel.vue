@@ -56,11 +56,12 @@ function handleFilechange(data: any) {
     else{
         file_list.value = Array.from(data["paths"])
     }
+    console.log(data["base_path"])
     store.$patch({
         img_path: '',
         img_root: data["base_path"]
     })
-
+    
 
 }
 
