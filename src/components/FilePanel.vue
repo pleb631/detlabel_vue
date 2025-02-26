@@ -30,7 +30,6 @@ const submitForm = async (event: Event) => {
 
     // 构建动态 URL
     const url = `${apiBaseUrl}/api/getFiles/${encodeURIComponent(fileName.value)}`;
-    console.log(url)
     try {
         const response = await fetch(url, {
             method: 'GET',
@@ -57,13 +56,20 @@ function handleFilechange(data: any) {
     else{
         file_list.value = Array.from(data["paths"])
     }
+    store.$patch({
+        img_path: '',
+        img_root: data["base_path"]
+    })
+
 
 }
 
 
 function click_fileitem(event: Event) {
     const target = event.target as HTMLInputElement;
-    console.log(target.value);
+    store.$patch({
+        img_path: target.value,
+    })
 
 }
 </script>
